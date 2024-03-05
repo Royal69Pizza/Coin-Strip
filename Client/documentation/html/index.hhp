@@ -1,0 +1,47 @@
+[OPTIONS]
+Compiled file=help.chm
+Compatibility=1.1
+Full-text search=Yes
+Contents file=index.hhc
+Default Window=main
+Default topic=index.html
+Index file=index.hhk
+Language=0x40C French
+Title=Client-Serveur
+
+[WINDOWS]
+main="Client-Serveur","index.hhc","index.hhk","index.html","index.html",,,,,0x23520,,0x10387e,,,,,,,,0
+
+[FILES]
+clientcxnmanager_8c.html
+dir_68267d1309a1af8e8297ef4c3efbcdba.html
+files.html
+globals.html
+globals_func.html
+globals_vars.html
+graph_legend.html
+index.html
+main_8c.html
+bc_s.png
+bdwn.png
+clientcxnmanager_8c__incl.pdf
+clientcxnmanager_8c__incl.png
+clientcxnmanager_8c_a866afac1361e7f042d6e37aa9ac86697_icgraph.pdf
+clientcxnmanager_8c_a866afac1361e7f042d6e37aa9ac86697_icgraph.png
+clientcxnmanager_8c_a89909ef726b1925ba1af6529a17427e2_icgraph.pdf
+clientcxnmanager_8c_a89909ef726b1925ba1af6529a17427e2_icgraph.png
+closed.png
+graph_legend.png
+main_8c__incl.pdf
+main_8c__incl.png
+main_8c_abf9e6b7e6f15df4b525a2e7705ba3089_cgraph.pdf
+main_8c_abf9e6b7e6f15df4b525a2e7705ba3089_cgraph.png
+nav_f.png
+nav_h.png
+open.png
+sync_off.png
+sync_on.png
+tab_a.png
+tab_b.png
+tab_h.png
+tab_s.png

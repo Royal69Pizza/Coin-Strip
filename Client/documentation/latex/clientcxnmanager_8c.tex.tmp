@@ -1,0 +1,85 @@
+\hypertarget{clientcxnmanager_8c}{}\doxysection{Référence du fichier src/clientcxnmanager.c}
+\label{clientcxnmanager_8c}\index{src/clientcxnmanager.c@{src/clientcxnmanager.c}}
+
+
+Client.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include $<$pthread.\+h$>$}\newline
+{\ttfamily \#include $<$sys/socket.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$arpa/inet.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}clientcxnmanager.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../../\+Common/ansi\+Colors.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../../\+Common/structures.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../../\+Common/common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../../\+Common/common.\+c\char`\"{}}\newline
+Graphe des dépendances par inclusion de clientcxnmanager.\+c\+:
+% FIG 0
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \mbox{\hyperlink{clientcxnmanager_8c_a866afac1361e7f042d6e37aa9ac86697}{thread\+Process}} (void $\ast$ptr)
+\item 
+int \mbox{\hyperlink{clientcxnmanager_8c_a89909ef726b1925ba1af6529a17427e2}{open\+\_\+connection}} (char $\ast$IP, int Port)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{clientcxnmanager_8c_a12b732829872776b6893cce6609bbb3e}{shared\+Data}} = 0
+\item 
+struct iden \mbox{\hyperlink{clientcxnmanager_8c_aedc2e211eebcba52ef0f314ba56d34e4}{test}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Client. 
+
+\begin{DoxyAuthor}{Auteur}
+Tom REINA-\/\+HIOT 
+
+Téo LANGUEBIEN 
+
+Valentin BRONSARD 
+
+Adrien BARRAT 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{clientcxnmanager_8c_a89909ef726b1925ba1af6529a17427e2}\label{clientcxnmanager_8c_a89909ef726b1925ba1af6529a17427e2}} 
+\index{clientcxnmanager.c@{clientcxnmanager.c}!open\_connection@{open\_connection}}
+\index{open\_connection@{open\_connection}!clientcxnmanager.c@{clientcxnmanager.c}}
+\doxysubsubsection{\texorpdfstring{open\_connection()}{open\_connection()}}
+{\footnotesize\ttfamily int open\+\_\+connection (\begin{DoxyParamCaption}\item[{char $\ast$}]{IP,  }\item[{int}]{Port }\end{DoxyParamCaption})}
+
+Voici le graphe des appelants de cette fonction \+:
+% FIG 1
+\mbox{\Hypertarget{clientcxnmanager_8c_a866afac1361e7f042d6e37aa9ac86697}\label{clientcxnmanager_8c_a866afac1361e7f042d6e37aa9ac86697}} 
+\index{clientcxnmanager.c@{clientcxnmanager.c}!threadProcess@{threadProcess}}
+\index{threadProcess@{threadProcess}!clientcxnmanager.c@{clientcxnmanager.c}}
+\doxysubsubsection{\texorpdfstring{threadProcess()}{threadProcess()}}
+{\footnotesize\ttfamily void$\ast$ thread\+Process (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr }\end{DoxyParamCaption})}
+
+Voici le graphe des appelants de cette fonction \+:
+% FIG 2
+
+
+\doxysubsection{Documentation des variables}
+\mbox{\Hypertarget{clientcxnmanager_8c_a12b732829872776b6893cce6609bbb3e}\label{clientcxnmanager_8c_a12b732829872776b6893cce6609bbb3e}} 
+\index{clientcxnmanager.c@{clientcxnmanager.c}!sharedData@{sharedData}}
+\index{sharedData@{sharedData}!clientcxnmanager.c@{clientcxnmanager.c}}
+\doxysubsubsection{\texorpdfstring{sharedData}{sharedData}}
+{\footnotesize\ttfamily int shared\+Data = 0}
+
+\mbox{\Hypertarget{clientcxnmanager_8c_aedc2e211eebcba52ef0f314ba56d34e4}\label{clientcxnmanager_8c_aedc2e211eebcba52ef0f314ba56d34e4}} 
+\index{clientcxnmanager.c@{clientcxnmanager.c}!test@{test}}
+\index{test@{test}!clientcxnmanager.c@{clientcxnmanager.c}}
+\doxysubsubsection{\texorpdfstring{test}{test}}
+{\footnotesize\ttfamily struct iden test}
+

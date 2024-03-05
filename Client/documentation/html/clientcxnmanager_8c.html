@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Client-Serveur: Référence du fichier src/clientcxnmanager.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Client-Serveur
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.1 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',false,false,'search.php','Recherche');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier clientcxnmanager.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Client.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;assert.h&gt;</code><br />
+<code>#include &lt;pthread.h&gt;</code><br />
+<code>#include &lt;sys/socket.h&gt;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
+<code>#include &lt;arpa/inet.h&gt;</code><br />
+<code>#include &lt;stdbool.h&gt;</code><br />
+<code>#include &quot;clientcxnmanager.h&quot;</code><br />
+<code>#include &quot;../../Common/ansiColors.h&quot;</code><br />
+<code>#include &quot;../../Common/structures.h&quot;</code><br />
+<code>#include &quot;../../Common/common.h&quot;</code><br />
+<code>#include &quot;../../Common/common.c&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de clientcxnmanager.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="clientcxnmanager_8c__incl.png" border="0" usemap="#asrc_2clientcxnmanager_8c" alt=""/></div>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a866afac1361e7f042d6e37aa9ac86697"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clientcxnmanager_8c.html#a866afac1361e7f042d6e37aa9ac86697">threadProcess</a> (void *ptr)</td></tr>
+<tr class="separator:a866afac1361e7f042d6e37aa9ac86697"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89909ef726b1925ba1af6529a17427e2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clientcxnmanager_8c.html#a89909ef726b1925ba1af6529a17427e2">open_connection</a> (char *IP, int Port)</td></tr>
+<tr class="separator:a89909ef726b1925ba1af6529a17427e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a12b732829872776b6893cce6609bbb3e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clientcxnmanager_8c.html#a12b732829872776b6893cce6609bbb3e">sharedData</a> = 0</td></tr>
+<tr class="separator:a12b732829872776b6893cce6609bbb3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedc2e211eebcba52ef0f314ba56d34e4"><td class="memItemLeft" align="right" valign="top">struct iden&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clientcxnmanager_8c.html#aedc2e211eebcba52ef0f314ba56d34e4">test</a></td></tr>
+<tr class="separator:aedc2e211eebcba52ef0f314ba56d34e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Client. </p>
+<dl class="section author"><dt>Auteur</dt><dd>Tom REINA-HIOT </dd>
+<dd>
+Téo LANGUEBIEN </dd>
+<dd>
+Valentin BRONSARD </dd>
+<dd>
+Adrien BARRAT </dd></dl>
+</div><h2 class="groupheader">Documentation des fonctions</h2>
+<a id="a89909ef726b1925ba1af6529a17427e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89909ef726b1925ba1af6529a17427e2">&#9670;&nbsp;</a></span>open_connection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int open_connection </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>IP</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>Port</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="clientcxnmanager_8c_a89909ef726b1925ba1af6529a17427e2_icgraph.png" border="0" usemap="#aclientcxnmanager_8c_a89909ef726b1925ba1af6529a17427e2_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a866afac1361e7f042d6e37aa9ac86697"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a866afac1361e7f042d6e37aa9ac86697">&#9670;&nbsp;</a></span>threadProcess()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* threadProcess </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>ptr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="clientcxnmanager_8c_a866afac1361e7f042d6e37aa9ac86697_icgraph.png" border="0" usemap="#aclientcxnmanager_8c_a866afac1361e7f042d6e37aa9ac86697_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des variables</h2>
+<a id="a12b732829872776b6893cce6609bbb3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12b732829872776b6893cce6609bbb3e">&#9670;&nbsp;</a></span>sharedData</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int sharedData = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aedc2e211eebcba52ef0f314ba56d34e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedc2e211eebcba52ef0f314ba56d34e4">&#9670;&nbsp;</a></span>test</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct iden test</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>
