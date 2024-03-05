@@ -1,0 +1,281 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Client-Serveur: Référence du fichier src/srvcxnmanager.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Client-Serveur
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.1 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',false,false,'search.php','Recherche');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier srvcxnmanager.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Serveur.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;pthread.h&gt;</code><br />
+<code>#include &lt;sys/socket.h&gt;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
+<code>#include &lt;arpa/inet.h&gt;</code><br />
+<code>#include &lt;assert.h&gt;</code><br />
+<code>#include &quot;srvcxnmanager.h&quot;</code><br />
+<code>#include &quot;../../Common/ansiColors.h&quot;</code><br />
+<code>#include &quot;../../Common/structures.h&quot;</code><br />
+<code>#include &quot;../../Common/common.h&quot;</code><br />
+<code>#include &quot;../../Common/common.c&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de srvcxnmanager.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="srvcxnmanager_8c__incl.png" border="0" usemap="#asrc_2srvcxnmanager_8c" alt=""/></div>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:acd9b786770513865bf74ec76f3ec80e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="srvcxnmanager_8c.html#acd9b786770513865bf74ec76f3ec80e2">init_sockets_array</a> ()</td></tr>
+<tr class="memdesc:acd9b786770513865bf74ec76f3ec80e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise le tableau des sockets.  <a href="srvcxnmanager_8c.html#acd9b786770513865bf74ec76f3ec80e2">Plus de détails...</a><br /></td></tr>
+<tr class="separator:acd9b786770513865bf74ec76f3ec80e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c4de6797bf83a34c97f8f5716832101"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="srvcxnmanager_8c.html#a6c4de6797bf83a34c97f8f5716832101">add</a> (connection_t *connection, char buffer_out[])</td></tr>
+<tr class="separator:a6c4de6797bf83a34c97f8f5716832101"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad0ff9ec9d4f8d7c12db5aabc7631aac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="srvcxnmanager_8c.html#aad0ff9ec9d4f8d7c12db5aabc7631aac">del</a> (connection_t *connection)</td></tr>
+<tr class="separator:aad0ff9ec9d4f8d7c12db5aabc7631aac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6fef1ab31876b777239a93cb8a0b167"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="srvcxnmanager_8c.html#ac6fef1ab31876b777239a93cb8a0b167">threadProcess</a> (void *args)</td></tr>
+<tr class="separator:ac6fef1ab31876b777239a93cb8a0b167"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b566a09780b67b1e307c11098809071"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="srvcxnmanager_8c.html#a0b566a09780b67b1e307c11098809071">create_server_socket</a> (char *IP, int Port)</td></tr>
+<tr class="separator:a0b566a09780b67b1e307c11098809071"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a0a8c4a54a7a64e18f89d288ca0ad6753"><td class="memItemLeft" align="right" valign="top">connection_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="srvcxnmanager_8c.html#a0a8c4a54a7a64e18f89d288ca0ad6753">connections</a> [MAXSIMULTANEOUSCLIENTS]</td></tr>
+<tr class="separator:a0a8c4a54a7a64e18f89d288ca0ad6753"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ecc31f9a4e420c14b96751db1e6c176"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="srvcxnmanager_8c.html#a0ecc31f9a4e420c14b96751db1e6c176">numberOfHello</a> = 0</td></tr>
+<tr class="separator:a0ecc31f9a4e420c14b96751db1e6c176"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Serveur. </p>
+<dl class="section author"><dt>Auteur</dt><dd>Tom REINA-HIOT </dd>
+<dd>
+Téo LANGUEBIEN </dd>
+<dd>
+Valentin BRONSARD </dd>
+<dd>
+Adrien BARRAT </dd></dl>
+</div><h2 class="groupheader">Documentation des fonctions</h2>
+<a id="a6c4de6797bf83a34c97f8f5716832101"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c4de6797bf83a34c97f8f5716832101">&#9670;&nbsp;</a></span>add()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void add </td>
+          <td>(</td>
+          <td class="paramtype">connection_t *&#160;</td>
+          <td class="paramname"><em>connection</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>buffer_out</em>[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="srvcxnmanager_8c_a6c4de6797bf83a34c97f8f5716832101_icgraph.png" border="0" usemap="#asrvcxnmanager_8c_a6c4de6797bf83a34c97f8f5716832101_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a0b566a09780b67b1e307c11098809071"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b566a09780b67b1e307c11098809071">&#9670;&nbsp;</a></span>create_server_socket()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int create_server_socket </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>IP</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>Port</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="srvcxnmanager_8c_a0b566a09780b67b1e307c11098809071_icgraph.png" border="0" usemap="#asrvcxnmanager_8c_a0b566a09780b67b1e307c11098809071_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="aad0ff9ec9d4f8d7c12db5aabc7631aac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad0ff9ec9d4f8d7c12db5aabc7631aac">&#9670;&nbsp;</a></span>del()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void del </td>
+          <td>(</td>
+          <td class="paramtype">connection_t *&#160;</td>
+          <td class="paramname"><em>connection</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="srvcxnmanager_8c_aad0ff9ec9d4f8d7c12db5aabc7631aac_icgraph.png" border="0" usemap="#asrvcxnmanager_8c_aad0ff9ec9d4f8d7c12db5aabc7631aac_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="acd9b786770513865bf74ec76f3ec80e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd9b786770513865bf74ec76f3ec80e2">&#9670;&nbsp;</a></span>init_sockets_array()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void init_sockets_array </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialise le tableau des sockets. </p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="srvcxnmanager_8c_acd9b786770513865bf74ec76f3ec80e2_icgraph.png" border="0" usemap="#asrvcxnmanager_8c_acd9b786770513865bf74ec76f3ec80e2_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ac6fef1ab31876b777239a93cb8a0b167"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6fef1ab31876b777239a93cb8a0b167">&#9670;&nbsp;</a></span>threadProcess()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* threadProcess </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="srvcxnmanager_8c_ac6fef1ab31876b777239a93cb8a0b167_cgraph.png" border="0" usemap="#asrvcxnmanager_8c_ac6fef1ab31876b777239a93cb8a0b167_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="srvcxnmanager_8c_ac6fef1ab31876b777239a93cb8a0b167_icgraph.png" border="0" usemap="#asrvcxnmanager_8c_ac6fef1ab31876b777239a93cb8a0b167_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des variables</h2>
+<a id="a0a8c4a54a7a64e18f89d288ca0ad6753"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a8c4a54a7a64e18f89d288ca0ad6753">&#9670;&nbsp;</a></span>connections</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">connection_t* connections[MAXSIMULTANEOUSCLIENTS]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0ecc31f9a4e420c14b96751db1e6c176"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ecc31f9a4e420c14b96751db1e6c176">&#9670;&nbsp;</a></span>numberOfHello</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int numberOfHello = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

@@ -1,0 +1,120 @@
+\hypertarget{srvcxnmanager_8c}{}\doxysection{Référence du fichier src/srvcxnmanager.c}
+\label{srvcxnmanager_8c}\index{src/srvcxnmanager.c@{src/srvcxnmanager.c}}
+
+
+Serveur.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$pthread.\+h$>$}\newline
+{\ttfamily \#include $<$sys/socket.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$arpa/inet.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}srvcxnmanager.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../../\+Common/ansi\+Colors.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../../\+Common/structures.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../../\+Common/common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../../\+Common/common.\+c\char`\"{}}\newline
+Graphe des dépendances par inclusion de srvcxnmanager.\+c\+:
+% FIG 0
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{srvcxnmanager_8c_acd9b786770513865bf74ec76f3ec80e2}{init\+\_\+sockets\+\_\+array}} ()
+\begin{DoxyCompactList}\small\item\em Initialise le tableau des sockets. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{srvcxnmanager_8c_a6c4de6797bf83a34c97f8f5716832101}{add}} (connection\+\_\+t $\ast$connection, char buffer\+\_\+out\mbox{[}$\,$\mbox{]})
+\item 
+void \mbox{\hyperlink{srvcxnmanager_8c_aad0ff9ec9d4f8d7c12db5aabc7631aac}{del}} (connection\+\_\+t $\ast$connection)
+\item 
+void $\ast$ \mbox{\hyperlink{srvcxnmanager_8c_ac6fef1ab31876b777239a93cb8a0b167}{thread\+Process}} (void $\ast$args)
+\item 
+int \mbox{\hyperlink{srvcxnmanager_8c_a0b566a09780b67b1e307c11098809071}{create\+\_\+server\+\_\+socket}} (char $\ast$IP, int Port)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+connection\+\_\+t $\ast$ \mbox{\hyperlink{srvcxnmanager_8c_a0a8c4a54a7a64e18f89d288ca0ad6753}{connections}} \mbox{[}MAXSIMULTANEOUSCLIENTS\mbox{]}
+\item 
+int \mbox{\hyperlink{srvcxnmanager_8c_a0ecc31f9a4e420c14b96751db1e6c176}{number\+Of\+Hello}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Serveur. 
+
+\begin{DoxyAuthor}{Auteur}
+Tom REINA-\/\+HIOT 
+
+Téo LANGUEBIEN 
+
+Valentin BRONSARD 
+
+Adrien BARRAT 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{srvcxnmanager_8c_a6c4de6797bf83a34c97f8f5716832101}\label{srvcxnmanager_8c_a6c4de6797bf83a34c97f8f5716832101}} 
+\index{srvcxnmanager.c@{srvcxnmanager.c}!add@{add}}
+\index{add@{add}!srvcxnmanager.c@{srvcxnmanager.c}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily void add (\begin{DoxyParamCaption}\item[{connection\+\_\+t $\ast$}]{connection,  }\item[{char}]{buffer\+\_\+out\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+Voici le graphe des appelants de cette fonction \+:
+% FIG 1
+\mbox{\Hypertarget{srvcxnmanager_8c_a0b566a09780b67b1e307c11098809071}\label{srvcxnmanager_8c_a0b566a09780b67b1e307c11098809071}} 
+\index{srvcxnmanager.c@{srvcxnmanager.c}!create\_server\_socket@{create\_server\_socket}}
+\index{create\_server\_socket@{create\_server\_socket}!srvcxnmanager.c@{srvcxnmanager.c}}
+\doxysubsubsection{\texorpdfstring{create\_server\_socket()}{create\_server\_socket()}}
+{\footnotesize\ttfamily int create\+\_\+server\+\_\+socket (\begin{DoxyParamCaption}\item[{char $\ast$}]{IP,  }\item[{int}]{Port }\end{DoxyParamCaption})}
+
+Voici le graphe des appelants de cette fonction \+:
+% FIG 2
+\mbox{\Hypertarget{srvcxnmanager_8c_aad0ff9ec9d4f8d7c12db5aabc7631aac}\label{srvcxnmanager_8c_aad0ff9ec9d4f8d7c12db5aabc7631aac}} 
+\index{srvcxnmanager.c@{srvcxnmanager.c}!del@{del}}
+\index{del@{del}!srvcxnmanager.c@{srvcxnmanager.c}}
+\doxysubsubsection{\texorpdfstring{del()}{del()}}
+{\footnotesize\ttfamily void del (\begin{DoxyParamCaption}\item[{connection\+\_\+t $\ast$}]{connection }\end{DoxyParamCaption})}
+
+Voici le graphe des appelants de cette fonction \+:
+% FIG 3
+\mbox{\Hypertarget{srvcxnmanager_8c_acd9b786770513865bf74ec76f3ec80e2}\label{srvcxnmanager_8c_acd9b786770513865bf74ec76f3ec80e2}} 
+\index{srvcxnmanager.c@{srvcxnmanager.c}!init\_sockets\_array@{init\_sockets\_array}}
+\index{init\_sockets\_array@{init\_sockets\_array}!srvcxnmanager.c@{srvcxnmanager.c}}
+\doxysubsubsection{\texorpdfstring{init\_sockets\_array()}{init\_sockets\_array()}}
+{\footnotesize\ttfamily void init\+\_\+sockets\+\_\+array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialise le tableau des sockets. 
+
+Voici le graphe des appelants de cette fonction \+:
+% FIG 4
+\mbox{\Hypertarget{srvcxnmanager_8c_ac6fef1ab31876b777239a93cb8a0b167}\label{srvcxnmanager_8c_ac6fef1ab31876b777239a93cb8a0b167}} 
+\index{srvcxnmanager.c@{srvcxnmanager.c}!threadProcess@{threadProcess}}
+\index{threadProcess@{threadProcess}!srvcxnmanager.c@{srvcxnmanager.c}}
+\doxysubsubsection{\texorpdfstring{threadProcess()}{threadProcess()}}
+{\footnotesize\ttfamily void$\ast$ thread\+Process (\begin{DoxyParamCaption}\item[{void $\ast$}]{args }\end{DoxyParamCaption})}
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+% FIG 5
+Voici le graphe des appelants de cette fonction \+:
+% FIG 6
+
+
+\doxysubsection{Documentation des variables}
+\mbox{\Hypertarget{srvcxnmanager_8c_a0a8c4a54a7a64e18f89d288ca0ad6753}\label{srvcxnmanager_8c_a0a8c4a54a7a64e18f89d288ca0ad6753}} 
+\index{srvcxnmanager.c@{srvcxnmanager.c}!connections@{connections}}
+\index{connections@{connections}!srvcxnmanager.c@{srvcxnmanager.c}}
+\doxysubsubsection{\texorpdfstring{connections}{connections}}
+{\footnotesize\ttfamily connection\+\_\+t$\ast$ connections\mbox{[}MAXSIMULTANEOUSCLIENTS\mbox{]}}
+
+\mbox{\Hypertarget{srvcxnmanager_8c_a0ecc31f9a4e420c14b96751db1e6c176}\label{srvcxnmanager_8c_a0ecc31f9a4e420c14b96751db1e6c176}} 
+\index{srvcxnmanager.c@{srvcxnmanager.c}!numberOfHello@{numberOfHello}}
+\index{numberOfHello@{numberOfHello}!srvcxnmanager.c@{srvcxnmanager.c}}
+\doxysubsubsection{\texorpdfstring{numberOfHello}{numberOfHello}}
+{\footnotesize\ttfamily int number\+Of\+Hello = 0}
+
